@@ -1,0 +1,91 @@
+
+
+
+/*--CSS de la partie header--*/
+
+ .page-header {
+    position: absolute;
+    width: 100%;
+    max-height: 365px;
+    min-height: 365px;
+}  
+
+.page-header-image {
+    position: absolute;
+    background-image: url(image/image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(40%);  
+    background-position: center center; 
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    
+    
+}
+
+.catégorie {
+    position: relative;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+
+.ma-pp {
+    position: relative;
+    margin-top: 81px;
+}
+
+.my-name {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    position: relative;
+    padding: 2px;
+    margin: 0px;
+    
+}
+
+.fa {
+    position: relative;
+    background-color: #464DFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+
+/*--CSS de la partie contenu--*/
+
+.section {
+    padding: 440px 0;
+    background: #fff;
+}
+
+.card {
+    border: 0;
+    border-radius: .1875rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2);
+}
+
+
+
