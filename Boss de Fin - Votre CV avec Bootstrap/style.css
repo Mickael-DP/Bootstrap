@@ -19,8 +19,6 @@
 
 
 
-
-
 /* CSS de la partie NAV */
 
 .navbar .navbar-nav .nav-item.active .nav-link:not(.btn), 
@@ -204,14 +202,12 @@ a:hover {
 
 
 @media screen and (max-width: 991px) {
+ 
     .navbar-translate {
-        position: absolute;
-        right: 0px;
-        width: 260px;
-        height: 100%;
-        background-color: blue;
-        text-align: center;
-        transition: 0.800 ease;
-    }
-    
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    } 
+       
 }
