@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+
+* {
+    font-family: Calibri;
+}
+
+/**********************************************************************************
+    Gestion simple du conteneur du controlleur
+**********************************************************************************/
+
+.controller-container {
+    display: block;
+    margin: 64px 200px 0px 200px;
+    text-align: center;
+    width: 50%;      
+}
+
+/**********************************************************************************
+    Partie globale de la manette (partie gris claire plus gris foncé)
+**********************************************************************************/
+
+.nes-controller {
+    background-color: rgb(209, 209, 207);
+    border-top: 5px solid rgb(182, 182, 182);
+    border-right: 5px solid rgb(158, 158, 158);
+    border-left: 5px solid rgb(158, 158, 158);
+    border-bottom: 5px solid rgb(153, 153, 153); 
+    padding: 20px ;
+    padding-top: 50px;
+    border-radius: 10px;
+    width: 700px;  
+    z-index: -1; 
+}
+
+.nes-controller .dark-part {
+    position: relative;
+    background-image: url(data:image/png;base64,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);
+    background-color: #101314;
+    border-radius: 5px;
+    height: 232px;
+    z-index: 1; 
+}
+
+
+
+/**********************************************************************************
+    Gestion des flèches du contrôleur (partie de gauche)
+**********************************************************************************/
+
+
+/**********************************************************************************
+    Partie centrale de la manette : rectangles gris, plus les bouttons
+**********************************************************************************/
+.buttons-control {
+    position: relative;
+    left: 245px;
+    bottom: 0px;
+    width: 200px;
+    height: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #959792;
+} 
+
+.buttons-control::before {
+    content:"";
+    position: absolute;
+    left: 0px;
+    top: 41px;
+    bottom: 6px;
+    width: 200px;
+    height: 33px;
+    border-radius: 5px;
+    background: #959792;
+}
+
+.buttons-control::after {
+    content:"";
+    position: absolute;
+    left: 0px;
+    top: 87px;
+    width: 200px;
+    height: 33px;
+    border-radius: 5px;
+    background: #959792;
+    z-index: -1;
+}
+
+.buttons-control .grey-separator {
+    display: inline-block;
+    margin-top: 88px;
+    margin-right: 26px;
+    margin-left: 15px;
+    width: 52px;
+    height: 17px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ce4036;
+
+}
+.buttons::before {
+    content:"";
+    position: absolute;
+    left: 5px;
+    bottom: 4px;
+    width: 180px;
+    height: 49px; 
+    border-radius: 5px;
+    border: 5px solid #bbb8b3; 
+}
+
+.buttons {
+    position: absolute;
+    left: 245px;
+    bottom: 34px;
+    width: 200px;
+    height: 67px; 
+    border-radius: 5px;
+    background: #d1d1cf;
+}
+
+.buttons::after {
+    content:"";
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    width: 200px;
+    height: 21px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #959792;
+}
+
+
+.buttons .button {
+    display: inline-block;
+    margin-top: 24px;
+    margin-right: 17px;
+    margin-left: 17px;
+    width: 56px;
+    height: 18px;
+    border-radius: 15px;
+    background-color: #2e3231 ;
+}
+
+/**********************************************************************************
+    Gestion des boutons (partie de A et B + logo)
+**********************************************************************************/
+
+.nintendo-logo {
+    position: absolute;
+    right: 70px;
+    top: 27px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ce4036;
+}
+
+.right-button {
+    position: relative;
+    display: inline-block;
+    text-align: end;
+    top: 101px;
+    left: 210px;
+    color: red;
+    padding-right: 18px;
+    font-size: 21px;
+    font-weight: bold;
+    z-index: 1;
+    
+}
+
+
+.right-button .outline {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #d8d7d3;
+    border-radius: 5px;
+    box-shadow: 0px -4px 0px #a6a6a6;
+}
+
+.outline > .button {
+    position: relative;
+    display: inline-block;
+    margin: 7px;
+    width: 57px;
+    height: 57px;
+    background: red;
+    border-radius: 50%;
+}
+
+
+.updown {
+    position: absolute;
+    display: flex;
+    top: 99px;
+    left: 48px;
+    width: 133px;
+    height: 45px;
+    background: #101012;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+.updown::before {
+    content:"";
+    position: absolute;
+    display: flex;
+    top: 0px;
+    left: 7px;
+    width: 118px;
+    height: 45px;
+    background: #101012;
+    z-index:1;
+}
+
+.updown::after {
+    content:"";
+    position: absolute;
+    display: flex;
+    top: 7px;
+    left: 51px;
+    width: 30px;
+    height: 30px;
+    background: #140002;
+    z-index:2;
+    border-radius: 50%;
+}
+
+
+.leftright {
+    position: absolute;
+    display: flex;
+    top: 56px;
+    left: 92px;
+    width: 45px;
+    height: 133px;
+    background: #101012;
+    border: 4px solid white;
+    border-radius: 10px;
+
+}
+
+.leftright::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    top: -110px;
+    left: 70px;
+    width: 36px;
+    height: 13px;
+    background: #bebebc;
+    border-right: 4px solid rgb(158, 158, 158);
+    border-left: 4px solid rgb(158, 158, 158);
+    border-bottom: 4px solid grey; 
+
+}
+    </style>
+
+<head>
+</head>
+
+<body>
+    <div class="controller-container">
+        <div class="nes-controller">
+            <div class="dark-part">
+
+                <!--
+                    On utilise deux rectangles pour créer la croix directionnelle de gauche
+                    -->
+                <span class="updown arrows-outline"></span>
+                <span class="leftright arrows-outline"></span>
+                <span class="updown arrows"></span>
+                <span class="leftright arrows"></span>
+
+                <!--
+                    La partie centrale de la manette est composée d'un bloc contenant les boutons START et SELECT -->
+                <div class="buttons-control">
+					<span class="grey-separator">SELECT</span>
+					<span class="grey-separator">START</span>
+				</div>
+                <div class="grey-separator buttons">
+                    <span class="button"></span>
+                    <span class="button"></span>
+                </div>
+
+                <!-- Ensuite, on affiche le logo de la marque en haut à droite -->
+                <div class="nintendo-logo">Nintendo<sup>&reg;</sup></div>
+
+                <!-- Et enfin, on affiche les deux boutons A et B sur la partie droite -->
+                <div class="right-button">
+                    <div class="outline">
+                        <span class="button"></span>
+                    </div>
+                    B
+                </div>
+                <div class="right-button">
+                    <div class="outline">
+                        <span class="button"></span>
+                    </div>
+                    A
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
